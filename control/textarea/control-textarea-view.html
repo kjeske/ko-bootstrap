@@ -1,0 +1,18 @@
+﻿
+<div class="form-group">
+
+    <!--ko if: label-->
+    <label data-bind="text: label"></label>
+    <!--/ko-->
+
+    <textarea rows="5"
+              class="form-control"
+              data-bind="
+            value: value,
+            attr: {
+                name: name,
+                rows: options.rows,
+                readonly: options.readOnly
+            }
+        "></textarea>
+</div>

@@ -1,0 +1,19 @@
+﻿
+<div class="form-group">
+
+    <!--ko if: label-->
+    <label data-bind="text: label"></label>
+    <!--/ko-->
+
+    <input type="text"
+           class="form-control"
+           data-bind="
+            value: value,
+            attr: {
+                type: type,
+                name: name,
+                readonly: options.readOnly,
+                placeholder: options.placeHolder
+            }
+        " />
+</div>

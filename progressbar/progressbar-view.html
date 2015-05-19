@@ -1,0 +1,21 @@
+﻿
+<div class="progress">
+    <div
+        role="progressbar"
+        data-bind="
+            css: css,
+            style: {
+                width: percent
+            },
+            attr: {
+                'aria-valuemax': max,
+                'aria-valuemin': min,
+                'aria-valuenow': value
+            },
+            if: labelVisible
+        ">
+    
+        <!-- ko text: percent --><!-- /ko -->
+    
+    </div>
+</div>

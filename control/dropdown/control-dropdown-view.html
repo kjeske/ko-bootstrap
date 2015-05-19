@@ -1,0 +1,21 @@
+﻿<div class="form-group">
+
+    <!--ko if: label-->
+    <label data-bind="text: label"></label>
+    <!--/ko-->
+
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+            <!-- ko text: selectedItem --><!-- /ko -->
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" data-bind="foreach: options.items">
+            <li data-bind="css: { selected: $component.value() == value }">
+                <a tabindex="-1" href="#" data-bind="text: text, click: $component.select"></a>
+            </li>
+        </ul>
+    </div>
+    
+    <input type="hidden" data-bind="value: value, attr: { name: name }"/>   
+
+</div>
