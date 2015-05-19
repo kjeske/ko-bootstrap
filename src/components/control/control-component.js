@@ -10,7 +10,7 @@
         './textarea/control-textarea-component',
         './radio/control-radio-component',
         './dropdown/control-dropdown-component',
-        './boolean/control-bool-component'
+        './bool/control-bool-component'
     ],
     function($, ko) {
 
@@ -34,10 +34,8 @@
                             
                         controlType = controlType || 'text';
 
-                        var templateName;
+                        var templateName = 'control-' + controlType;
 
-                        templateName = 'control-' + controlType;
-                        
                         return new Component({
                             templateParams: templateParams,
                             templateName: templateName
@@ -50,8 +48,8 @@
 
         function Component(params) {
 
-            this.controlTemplate = params.controlTemplate;
-            this.controlData = params.controlData;
+            this.templateName = params.templateName;
+            this.templateParams = params.templateParams;
 
         }
 

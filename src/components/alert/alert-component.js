@@ -12,6 +12,7 @@
                     createViewModel: function (params, componentInfo) {
                         var element = $(componentInfo.element);
                         params.type = params.type || element.attr('type');
+                        params.context = ko.dataFor(componentInfo.element);
                         return new Component(params);
                     }
                 },

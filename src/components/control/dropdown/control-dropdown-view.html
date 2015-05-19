@@ -11,7 +11,7 @@
         </button>
         <ul class="dropdown-menu" role="menu" data-bind="foreach: options.items">
             <li data-bind="css: { selected: $component.value() == value }">
-                <a tabindex="-1" href="#" data-bind="text: text, click: $component.select"></a>
+                <a tabindex="-1" href="#" data-bind="text: text, click: $component.select.bind($component, $data)"></a>
             </li>
         </ul>
     </div>
