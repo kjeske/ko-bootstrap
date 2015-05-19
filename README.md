@@ -40,7 +40,7 @@ form['Password'] = ko.observable()
     }
   });
   
-form['Gender'] = ko.observable()
+form['Gender'] = ko.observable('male')
   .extend({
     bootstrap: {
       label: 'Gender',
