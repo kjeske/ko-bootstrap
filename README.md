@@ -21,7 +21,7 @@ KnockoutJS, jQuery
 require('./extenders/bootstrap-extenders');
 require('./components/bootstrap-components-init');
 
-var form = {
+var form = {};
 
 form['Name'] = ko.observable('John')
   .extend({
