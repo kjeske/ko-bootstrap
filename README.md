@@ -1,7 +1,7 @@
 # ko-bootstrap
 Twitter bootstrap components for KnockoutJS
 
-```
+```html
 <form data-bind="with: form">
   <control params="value: Name"></control>
   <control params="value: Password"></control>
@@ -9,8 +9,8 @@ Twitter bootstrap components for KnockoutJS
 </form>
 ```
 
-```
-var form = {};
+```javascript
+var form = {
 
 form['Name'] = ko.observable('John')
   .extend({
