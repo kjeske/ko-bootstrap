@@ -58,3 +58,9 @@ var model = {
 
 ko.applyBindings(model);
 ```
+
+## How to run the demo
+Install nodejs and inside repository folder run command
+```
+node server.js
+```
