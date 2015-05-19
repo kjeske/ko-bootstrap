@@ -20,8 +20,7 @@ KnockoutJS, jQuery
 ```
 
 ```javascript
-require('./extenders/bootstrap-extenders');
-require('./components/bootstrap-components-init');
+[...]
 
 var form = {};
 
@@ -30,7 +29,7 @@ form['Name'] = ko.observable('John')
     bootstrap: {
       type: 'text', // text is by default, can be ommited
       label: 'Your name',
-      readOnly: 'text'
+      readOnly: true
     }
   });
   
@@ -59,6 +58,8 @@ var model = {
 };
 
 ko.applyBindings(model);
+
+[...]
 ```
 
 ## How to run the demo
