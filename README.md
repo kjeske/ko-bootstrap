@@ -64,3 +64,7 @@ Install nodejs and inside repository folder run command
 ```
 node server.js
 ```
+Open website:
+```
+http://localhost:8888/demo/index.html
+```
