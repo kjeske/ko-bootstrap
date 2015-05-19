@@ -1,15 +1,26 @@
 # ko-bootstrap
 Twitter bootstrap components for KnockoutJS
 
+Dependencies:
+KnockoutJS, jQuery
+
 ```html
 <form data-bind="with: form">
-  <control params="value: Name"></control>
-  <control params="value: Password"></control>
-  <control params="value: Gender"></control>
+    <control params="value: Name"></control>
+    <control params="value: Password"></control>
+    <control params="value: Gender"></control>
+  
+    <if params="condition: Gender() === 'male'">
+        <true>You are a male!</true>
+        <false>You are a female!</false>
+    </if>
 </form>
 ```
 
 ```javascript
+require('./extenders/bootstrap-extenders');
+require('./components/bootstrap-components-init');
+
 var form = {
 
 form['Name'] = ko.observable('John')
@@ -35,8 +46,8 @@ form['Gender'] = ko.observable()
       label: 'Gender',
       type: 'dropdown',
       items: [
-        { text: 'Male', value: 20 },
-        { text: 'Female', value: 30 }
+        { text: 'Male', value: 'male' },
+        { text: 'Female', value: 'female' }
       ]
     }
   });  
