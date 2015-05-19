@@ -1,3 +1,5 @@
+// source: http://stackoverflow.com/a/13635318/1271313
+
 var http = require("http"),
     url = require("url"),
     path = require("path"),
