@@ -7,6 +7,12 @@
             data-main="startup.js">
         </script>
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+        <style>
+            .dropdown-menu > li.selected > a {
+                font-weight: bold;
+            }
+        </style>
         
     </head>    
     <body>
@@ -18,10 +24,21 @@
             <form data-bind="with: form">
         
                 <control params="value: Name"></control>
-                <control params="value: Gender"></control>                
+                <control params="value: Gender"></control>
+                <control params="value: Status"></control>
+                    
+                <hr/>
+                    
+                <control params="value: PickPassword"></control>                
                 <control params="value: Password"></control>
-            
-                <alert type="success">
+                    
+                <field params="label: 'Custom field'">
+                    That shows the status: <i data-bind="text: Status"></i>
+                </field>   
+
+                <hr/>
+                       
+                <alert params="type: Status">
         
                     <if params="condition: Gender() === 'male'">
                         <true>You are a male!</true>

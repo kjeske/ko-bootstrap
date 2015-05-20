@@ -1,0 +1,9 @@
+<div class="form-group">
+    
+    <!--ko if: options.label-->
+    <label data-bind="text: options.label"></label>
+    <!--/ko-->
+    
+    <div data-bind="template: { nodes: bodyNodes, data: context }"></div>
+    
+</div>

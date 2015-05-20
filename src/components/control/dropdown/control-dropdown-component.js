@@ -19,21 +19,22 @@
             ComponentBase.call(this, params);
 
             this.selectedItem = ko.computed(function() {
+             
                 var items = ko.unwrap(this.options.items);
-                
+                                
                 var item = ko.utils.arrayFirst(items, function(x) {
                     return x.value == params.value();
                 });
 
                 return item ? item.text : null;
+                
             }, this);
         }
 
         Component.prototype = Object.create(ComponentBase.prototype);
 
-        Component.prototype.select = function(item) {
+        Component.prototype.select = function(item, a, b) {
             this.value(item.value);
-        }
-
+        };
     }
 );

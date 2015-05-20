@@ -24,7 +24,10 @@
 
             this.params = params;
             this.context = params.context;
-            this.css = 'alert alert-' + params.type;
+            
+            this.css = ko.computed(function() { 
+                return 'alert alert-' + ko.unwrap(params.type); 
+            });
 
             this.visible = ko.computed(function () {
 

@@ -9,17 +9,10 @@
 
         ko.components.register('control-text-action',
             {
-                viewModel: Component,
+                viewModel: TextComponent,
                 template: template
             }
         );
 
-        function Component(params) {
-
-            TextComponent.call(this, params);
-
-        }
-
-        Component.prototype = Object.create(TextComponent.prototype);
     }
 );

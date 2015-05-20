@@ -7,7 +7,6 @@
             this.options = params.options;
 
             this.name = this.options.name;
-            this.label = this.options.label;
 
         }
 

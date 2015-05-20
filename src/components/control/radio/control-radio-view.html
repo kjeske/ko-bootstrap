@@ -1,18 +1,23 @@
-﻿<div class="form-group">
-
-    <!--ko if: label-->
-    <label data-bind="text: label"></label>
-    <!--/ko-->
+﻿<field params="options: options">
 
     <!-- ko foreach: options.items -->
 
     <div class="radio">
         <label>
-            <input type="radio" data-bind="value: value, checked: $component.value, attr: { name: $component.name }" />
+            <input 
+                type="radio" 
+                data-bind="
+                    value: value, 
+                    checked: $component.value, 
+                    attr: { 
+                        name: $component.name 
+                    }
+                " />
+                
             <!-- ko text: text --><!-- /ko -->
         </label>
     </div>
 
     <!-- /ko -->
 
-</div>
+</field>
