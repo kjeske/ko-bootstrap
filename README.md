@@ -10,11 +10,6 @@ KnockoutJS, Bootstrap
     <control params="value: Name"></control>
     <control params="value: Password"></control>
     <control params="value: Gender"></control>
-  
-    <if params="condition: Gender() === 'male'">
-        <true>You are a male!</true>
-        <false>You are a female!</false>
-    </if>
 
 </form>
 ```
