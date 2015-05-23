@@ -1,11 +1,10 @@
 ﻿define(
     [
-        'jquery',
         'knockout',
         '../text/control-text-component',
         'text!./control-text-action-view.html'
     ],
-    function($, ko, TextComponent, template) {
+    function(ko, TextComponent, template) {
 
         ko.components.register('control-text-action',
             {

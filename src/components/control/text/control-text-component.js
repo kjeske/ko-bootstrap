@@ -1,11 +1,10 @@
 ﻿define(
     [
-        'jquery',
         'knockout',
         '../control-base',
         'text!./control-text-view.html'
     ],
-    function ($, ko, ComponentBase, template) {
+    function (ko, ComponentBase, template) {
 
         ko.components.register('control-text',
             {

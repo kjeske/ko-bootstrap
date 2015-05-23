@@ -1,10 +1,9 @@
 ﻿define(
     [
-        'jquery',
         'knockout',
         'text!./progressbar-view.html'
     ],
-    function($, ko, template) {
+    function(ko, template) {
 
         ko.components.register('progressbar',
             {
@@ -21,14 +20,12 @@
 
         function Component(params, componentInfo) {
 
-            var element = $(componentInfo.element);
-
             this.params = params;
 
-            this.type = this.params.type || element.attr('type');
-            this.label = this.params.label || element.attr('label');
-            this.min = this.params.min || element.attr('min');
-            this.max = this.params.max || element.attr('max');
+            this.type = this.params.type || componentInfo.element.getAttribute('type');
+            this.label = this.params.label || componentInfo.element.getAttribute('label');
+            this.min = this.params.min || componentInfo.element.getAttribute('min');
+            this.max = this.params.max || componentInfo.element.getAttribute('max');
             this.value = this.params.value;
 
             this.css = 'progress-bar ' + (this.type ? 'progress-bar-' + this.type : null);

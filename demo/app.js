@@ -4,7 +4,6 @@ define(
         "knockout",
         "extenders/bootstrap-extenders",
         'components/bootstrap-components-init',
-        'jquery',
         'bootstrap'
     ],
 

@@ -1,11 +1,10 @@
 ﻿define(
     [
-        'jquery',
         'knockout',
         '../control-base',
         'text!./control-radio-view.html'
     ],
-    function ($, ko, ComponentBase, template) {
+    function (ko, ComponentBase, template) {
 
         ko.components.register('control-radio',
             {

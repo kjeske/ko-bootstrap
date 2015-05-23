@@ -2,16 +2,13 @@ requirejs.config({
     baseUrl: '../src',
 
     paths: {
-        'knockout': 'http://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min',
-        'bootstrap': 'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min',
-        'jquery': 'http://code.jquery.com/jquery-2.1.4',
-        'text': '../demo/text'
+        'knockout': '../demo/lib/knockout-min',
+        'bootstrap': '../demo/lib/bootstrap.min',
+        'jquery': '../demo/lib/jquery-2.1.4.min',
+        'text': '../demo/lib/text'
     },
 
     shim: {
-        'jquery': {
-            exports: '$',
-        },
         'bootstrap': {
             deps: ['jquery'],
         }

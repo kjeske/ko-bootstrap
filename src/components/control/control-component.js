@@ -1,6 +1,5 @@
 ﻿define(
     [
-        'jquery',
         'knockout',
 
         // components:
@@ -12,14 +11,12 @@
         './dropdown/control-dropdown-component',
         './bool/control-bool-component'
     ],
-    function($, ko) {
+    function(ko) {
 
         ko.components.register('control',
             {
                 viewModel: {
                     createViewModel: function (params, componentInfo) {
-
-                        var element = $(componentInfo.element);
 
                         var templateParams = {
                             options: params.value.bootstrap,
@@ -27,10 +24,10 @@
                         };
 
                         templateParams.options.name = templateParams.options.name
-                            || getValueName(element.attr('params'));
+                            || getValueName(componentInfo.element.getAttribute('params'));
 
                         var controlType = templateParams.options.type
-                            || element.attr('type');
+                            || componentInfo.element.getAttribute('type');
                             
                         controlType = controlType || 'text';
 
@@ -61,8 +58,8 @@
 
                 var split = allParamsStrings[i].split(':');
 
-                if ($.trim(split[0]) == paramName) {
-                    return $.trim(split[1]);
+                if (split[0].trim() == paramName) {
+                    return split[1].trim();
                 }
             }
 

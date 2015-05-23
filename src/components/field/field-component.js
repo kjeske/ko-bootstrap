@@ -1,11 +1,10 @@
 ﻿define(
     [
-        'jquery',
         'knockout',
         './layout/field-pure-component',
         './layout/field-vertical-component'
     ],
-    function($, ko) {
+    function(ko) {
 
         ko.components.register('field',
             {

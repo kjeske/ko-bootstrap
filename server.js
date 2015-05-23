@@ -3,13 +3,13 @@
 var http = require("http"),
     url = require("url"),
     path = require("path"),
-    fs = require("fs")
+    fs = require("fs"),
     port = process.argv[2] || 8888;
 
 http.createServer(function(request, response) {
 
-  var uri = url.parse(request.url).pathname
-    , filename = path.join(process.cwd(), uri);
+  var uri = url.parse(request.url).pathname, 
+      filename = path.join(process.cwd(), uri);
 
   var contentTypesByExtension = {
     '.html': "text/html",
@@ -17,7 +17,7 @@ http.createServer(function(request, response) {
     '.js':   "text/javascript"
   };
 
-  path.exists(filename, function(exists) {
+  fs.exists(filename, function(exists) {
     if(!exists) {
       response.writeHead(404, {"Content-Type": "text/plain"});
       response.write("404 Not Found\n");
@@ -45,4 +45,6 @@ http.createServer(function(request, response) {
   });
 }).listen(parseInt(port, 10));
 
-console.log("Static file server running at\n  => http://localhost:" + port + "/\nCTRL + C to shutdown");
+console.log("Go to \n  => http://localhost:" + port + "/demo/\n to see the demo page.");
+console.log("===");
+console.log("CTRL+C to shutdown");

@@ -1,17 +1,15 @@
 ﻿define(
     [
-        'jquery',
         'knockout',
         'text!./alert-view.html'
     ],
-    function($, ko, template) {
+    function(ko, template) {
 
         ko.components.register('alert',
             {
                 viewModel: {
                     createViewModel: function (params, componentInfo) {
-                        var element = $(componentInfo.element);
-                        params.type = params.type || element.attr('type');
+                        params.type = params.type || componentInfo.element.getAttribute('type');
                         params.context = ko.dataFor(componentInfo.element);
                         return new Component(params);
                     }

@@ -1,9 +1,8 @@
 ﻿define(
     [
-        'jquery',
         'knockout'
     ],
-    function($, ko) {
+    function(ko) {
 
         ko.components.register('field-pure',
             {
