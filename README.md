@@ -1,8 +1,8 @@
 # ko-bootstrap
-Twitter bootstrap components for KnockoutJS
+Bootstrap components for KnockoutJS
 
 Dependencies:
-KnockoutJS, jQuery
+KnockoutJS, Bootstrap
 
 ```html
 <form data-bind="with: form">
@@ -63,11 +63,11 @@ ko.applyBindings(model);
 ```
 
 ## How to run the demo
-Install nodejs and inside repository folder run command
+This demo uses RequireJS and its Text plugin so in order to run it properly you need to set up a simple web server. This repository provides a NodeJS script to run such server. Inside the main repository folder run NodeJS command:
 ```
 node server.js
 ```
-Open website:
+Then open website:
 ```
 http://localhost:8888/demo/index.html
 ```
